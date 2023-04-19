@@ -1,0 +1,15 @@
+extends layout
+
+block main
+    main  
+        section.coralBG
+            .formWrapper.fcc
+                form(action="/askChat", method="POST").fcc
+                    h4 Enter a query for chat GPT
+                    input(type="text" name="question")
+                    input(type="submit", value="Submit ->") 
+
+        section 
+            h4 #{question}
+            br
+            p #{answer}
