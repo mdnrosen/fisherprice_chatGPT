@@ -11,7 +11,6 @@ const openai = new OpenAIApi(configuration)
 
 exports.askChat = async (req, res, next) => {
     try {
-        console.log('*******',process.env.OPENAI_API_KEY)
         const { question } = req.body
         const { data } = await openai.createCompletion({
             model: 'text-davinci-003',
