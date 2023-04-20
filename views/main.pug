@@ -6,10 +6,12 @@ block main
             .formWrapper.fcc
                 form(action="/askChat", method="POST").fcc
                     h4 Enter a query for chat GPT
-                    input(type="text" name="question")
+                    input(type="text" name="question" placeholder="eg. Find the worst review for 'Aquaventure Dubai' and make it into a Haiku")
                     input(type="submit", value="Submit ->") 
 
         section 
             h4 #{question}
             br
             p #{answer}
+            span.fcc
+                a(href="/") Reset form

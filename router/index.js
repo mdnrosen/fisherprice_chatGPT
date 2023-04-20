@@ -6,7 +6,6 @@ const cc = require('../controllers/chatController')
 
 router.get('/', (req, res) => {
     // res.json({ it: 'works' })
-    console.log(req.text)
     res.render('main', { title: 'Home', text: req.text || ''})
 })
 

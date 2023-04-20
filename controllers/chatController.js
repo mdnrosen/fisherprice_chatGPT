@@ -18,14 +18,13 @@ exports.askChat = async (req, res, next) => {
             max_tokens: 1064
         })
 
-        console.log(data.choices[0])
-
         req.question = question
         req.answer = data.choices[0].text
         next() 
     } catch (err) {
         console.log(err)
-        res.json(err)
+        req.question = '--- There was an error! ---'
+        req.answer = err.response.data
     }
 }
 
